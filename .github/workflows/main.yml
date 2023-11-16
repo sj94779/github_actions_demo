@@ -28,10 +28,12 @@ jobs:
 #          ln -s ../Runner.app
 #          cd ..
 #          zip -r app.ipa Payload
+
+
 #      - name: Builds - build Flutter APK and create github release
 #        uses: Dank-del/flutter-build-and-publish-action@v1
 
-      - run: flutter build apk
+#      - run: flutter build apk
       - uses: actions/upload-artifact@v1
         with:
           name: release-apk
