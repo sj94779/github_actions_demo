@@ -30,25 +30,36 @@ jobs:
 #          zip -r app.ipa Payload
 
 
+
+
 #      - name: Builds - build Flutter APK and create github release
 #        uses: Dank-del/flutter-build-and-publish-action@v1
 
+
+
 #      - run: flutter build apk
+
+
 
 #      - uses: actions/upload-artifact@v2
 #        with:
 #          name: release-apk
 #          path: build/app/outputs/apk/release/app-release.apk
 
-      - name: Start release build
-        run: flutter build appbundle
 
-#      - name: Push to Releases
-#        uses: ncipollo/release-action@v1.13.0
-#        with:
-#          artifacts: "build/app/outputs/apk/debug/*,build/ios/iphoneos/app.ipa"
-#          tag: v1.0.${{ github.run_number }}
-#          token: ${{ secrets.TOKEN }}
+
+#      - name: Start release build
+#        run: flutter build appbundle
+
+
+
+
+      - name: Push to Releases
+        uses: ncipollo/release-action@v1.13.0
+        with:
+          artifacts: "build/app/outputs/apk/debug/*,build/ios/iphoneos/app.ipa"
+          tag: v1.0.${{ github.run_number }}
+          token: ${{ secrets.TOKEN }}
 
 
 
