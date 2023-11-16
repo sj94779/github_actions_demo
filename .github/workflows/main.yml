@@ -19,7 +19,7 @@ jobs:
         with:
           flutter-version: '3.7.7'
           channel: 'stable'
-      - run: flutter build apk --debug --split-per-abi
+      - run: flutter build apk --debug
       - run: |
           flutter build ios --no-codesign
           cd build/ios/iphoneos
