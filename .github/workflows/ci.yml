@@ -53,5 +53,3 @@ jobs:
       - run: flutter pub get
       - run: flutter clean
       - run: flutter build apk
-        with:
-          artifacts: "build/app/outputs/apk/debug/*"

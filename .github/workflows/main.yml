@@ -23,7 +23,8 @@ jobs:
       - name: Push to Releases
         uses: ncipollo/release-action@v1.13.0
         with:
-           artifacts: "build/app/outputs/apk/debug/*,build/ios/iphoneos/app.ipa"
+#           artifacts: "build/app/outputs/apk/debug/*,build/ios/iphoneos/app.ipa"
+           artifact: "build/app/outputs/flutter-apk/app-release.apk"
            tag: v1.0.${{ github.run_number }}
 #           token: ${{ secrets.TOKEN }}
 
